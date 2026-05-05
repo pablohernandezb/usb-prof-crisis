@@ -12,7 +12,7 @@ library(tibble)
 # ── Datos ─────────────────────────────────────────────────────────────────────
 cargos <- tribble(
   ~division, ~depto_codigo, ~depto_nombre,                                       ~id,        ~dedicacion, ~horas, ~n,
-  # ── CB: Ciencias Básicas ───────────────────────────────────────────────────
+  # ── CB: Ciencias Biológicas ───────────────────────────────────────────────────
   "CB", "BL",   "Biología",                                                      "BL-01",    "DE",  40, 1,
   "CB", "BL",   "Biología",                                                      "BL-02",    "DE",  40, 1,
   "CB", "BL",   "Biología",                                                      "BL-03",    "DE",  40, 1,
@@ -250,7 +250,7 @@ colores_div <- c(
 )
 
 nombres_div <- c(
-  "CB"   = "Ciencias Básicas",
+  "CB"   = "Ciencias Biológicas",
   "CTAI" = "Cs. y Tecnologías\nAdministrativas e Industriales",
   "FyM"  = "Física y Matemáticas",
   "SyH"  = "Ciencias Sociales\ny Humanidades"
@@ -440,7 +440,7 @@ p5 <- ggplot(depto_completo, aes(x = fct_reorder(depto_label, total), y = total,
   coord_flip() +
   facet_wrap(~division, scales = "free_y", ncol = 2,
              labeller = labeller(division = c(
-               "CB"   = "Ciencias Básicas",
+               "CB"   = "Ciencias Biológicas",
                "CTAI" = "Cs. y Tecnologías Administrativas e Industriales",
                "FyM"  = "Física y Matemáticas",
                "SyH"  = "Ciencias Sociales y Humanidades"
